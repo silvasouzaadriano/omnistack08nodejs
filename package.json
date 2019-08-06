@@ -4,7 +4,13 @@
   "main": "index.js",
   "author": "Adriano R S Souza <silva.souza.adriano@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
