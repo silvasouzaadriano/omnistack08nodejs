@@ -1,0 +1,49 @@
+yarn init -y // iniciar o projeto com arquivo json
+
+// Métodos para API GET, PUT, PUSH, DELETE
+
+//Rodar o servidor manualmente
+node <nome aplicação). ie: node src/server.js
+
+//Dependências
+yarn add express // microframework para lidar com rotas (request/response para o servidor)
+yarn add nodemon -D // para criar rodar o servidor de forma automática através de proprieade "scripts" no arquivo package.jsons
+yarn add mongoose (rodar essa opção somente depois e ter concluido a configuração do Mongodb). Esse ODM vai facilitar o usuo do DB usando somente 
+sintaxe JavaScript
+yarn add axios // Para acessar APIs
+yarn add cors // Para permitir que a aplicação seja acessada por qualquer endereço
+
+//Insomnia para simular API metodos (https://support.insomnia.rest/article/23-installation#linux)
+
+# Add to sources
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+# Add public key used to verify code signature
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+    | sudo apt-key add -
+
+# Refresh repository sources and install Insomnia
+sudo apt-get update
+sudo apt-get install insomnia
+
+//Configuração Mongodb (Mais fácil configurar com schema free; mais performático na maioria das vezes caso não tenha relacionamentos complexos)
+Criar um usuário/senha no mongodb atlas 
+user=silva.souza.adriano@gmail.com
+psw=vzq9qh19
+1) Criar um novo cluster com o nome omnistack
+2) Criar um usuário para o DB na opção Database Access, escolhendo a opção Read and Write to any database 
+user db = omnistack
+psw db = omnistack19
+3) Na opção Network access criar uma conexão utilizando a segunda opção "Allow access from anywhere" para liberar o acesso ao DB para qualquer aplicação/IP
+4) Em Cluster/Connect/Connect Your Application copiar a URL de conexão
+'mongodb+srv://<username>:<password>@cluster0-wif1w.mongodb.net/test?retryWrites=true&w=majority'
+'mongodb+srv://omnistack:omnistack19@cluster0-wif1w.mongodb.net/omnistack8?retryWrites=true&w=majority'
+
+// Para verificação de dados no MongoDb instalar Mongodb Compass Community
+1) Url pra instalação: https://www.mongodb.com/download-center/compass?jmp=hero
+2) Faça o download e clique no arquivo .deb para instalar
+3) Após a instalação execute o Mongodb Compass e  vá para o Mongodb Atlas opção Cluster/Connect/Connect with Mondodb Compass e copie a URL. O Compass detectará e se for escolhida a opção YEs o formulário será preenchido. 
+4) Preencha com usuário e senha e informe admin no campo Authentication database 
+
+
