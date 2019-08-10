@@ -44,6 +44,9 @@ psw db = omnistack19
 1) Url pra instalação: https://www.mongodb.com/download-center/compass?jmp=hero
 2) Faça o download e clique no arquivo .deb para instalar
 3) Após a instalação execute o Mongodb Compass e  vá para o Mongodb Atlas opção Cluster/Connect/Connect with Mondodb Compass e copie a URL. O Compass detectará e se for escolhida a opção YEs o formulário será preenchido. 
-4) Preencha com usuário e senha e informe admin no campo Authentication database 
+4) Preencha com usuário e senha e informe admin no campo Authentication database
+
+//Funcionalidade Match
+yarn add socket.io
 
 
